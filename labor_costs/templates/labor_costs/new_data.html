@@ -1,0 +1,32 @@
+{% extends "labor_costs/base.html" %}
+
+{% block content %}
+  <p>报表年份</p>
+
+  <form action="{% url 'labor_costs:new_data' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_div }}
+  </form>
+
+  <p>报表月份</p>
+
+  <form action="{% url 'labor_costs:new_data' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_div }}
+  </form>
+
+  <p>导入SAP单月人工成本表</p>
+
+  <form action="{% url 'labor_costs:new_data' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_div }}
+  </form>
+
+  <p>导入SAP多月人工成本表</p>
+
+  <form action="{% url 'labor_costs:new_data' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_div }}
+    <button  name="submit">下一步</button>
+  </form>
+{% endblock content %}
